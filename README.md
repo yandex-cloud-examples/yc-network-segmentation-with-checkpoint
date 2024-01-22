@@ -46,7 +46,7 @@
 
 ### Next-Generation Firewall
 
-В [Yandex Cloud Marketplace](https://cloud.yandex.ru/marketplace?categories=security) доступно несколько вариантов NGFW. В данном сценарии используется решение [Check Point CloudGuard IaaS](https://cloud.yandex.ru/marketplace/products/checkpoint/cloudguard-iaas-firewall-tp-payg-m), предоставляющее следующие возможности:
+В [Yandex Cloud Marketplace](https://cloud.yandex.ru/marketplace?categories=security) доступно несколько вариантов NGFW. В данном сценарии используется решение [Check Point CloudGuard IaaS](https://cloud.yandex.ru/ru/marketplace?publishers=f2evobrhpbdrcue7s9l5&tab=software), предоставляющее следующие возможности:
 - Межсетевой экран, NAT, предотвращение вторжений, антивирус и защита от ботов
 - Гранулярный контроль трафик на уровне приложений, логирование сессий
 - Централизованное управление с помощью решения Check Point Security Management
