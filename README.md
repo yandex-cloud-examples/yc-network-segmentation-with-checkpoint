@@ -46,19 +46,17 @@
 
 ### Next-Generation Firewall
 
-В [Yandex Cloud Marketplace](https://cloud.yandex.ru/marketplace?categories=security) доступно несколько вариантов NGFW. В данном сценарии используется решение [Check Point CloudGuard IaaS](https://cloud.yandex.ru/ru/marketplace?publishers=f2evobrhpbdrcue7s9l5&tab=software), предоставляющее следующие возможности:
+В [Yandex Cloud Marketplace](https://yandex.cloud/marketplace?categories=security) доступно несколько вариантов NGFW. В данном сценарии используется решение [Check Point CloudGuard IaaS](https://yandex.cloud/ru/marketplace?publishers=f2evobrhpbdrcue7s9l5&tab=software), предоставляющее следующие возможности:
 - Межсетевой экран, NAT, предотвращение вторжений, антивирус и защита от ботов
 - Гранулярный контроль трафик на уровне приложений, логирование сессий
 - Централизованное управление с помощью решения Check Point Security Management
 - Решение Check Point в данном примере настроено с базовыми политиками доступа (Access Control) и NAT
 
-Решение Check Point CloudGuard IaaS доступно в Yandex Cloud Marketplace в вариантах Pay as you go и BYOL. В этом примере используется BYOL вариант с Trial периодом 15 дней:
-- ВМ NGFW [Check Point CloudGuard IaaS - Firewall & Threat Prevention BYOL](https://cloud.yandex.ru/marketplace/products/checkpoint/cloudguard-iaas-firewall-tp-byol-m)
+Решение Check Point CloudGuard IaaS доступно в Yandex Cloud Marketplace в варианте BYOL с Trial периодом 15 дней:
+- ВМ NGFW [Check Point CloudGuard IaaS - Firewall & Threat Prevention BYOL](https://yandex.cloud/ru/marketplace/products/checkpoint/cloudguard-iaas-firewall-tp-byol-m) 
 - ВМ сервера управления [Check Point CloudGuard IaaS - Security Management BYOL](https://cloud.yandex.ru/marketplace/products/checkpoint/cloudguard-iaas-security-management-byol-m) для задач управления NGFW
 
-Для использования в продуктивной среде рекомендуется рассматривать варианты:
-- NGFW [Check Point CloudGuard IaaS - Firewall & Threat Prevention PAYG](https://cloud.yandex.ru/marketplace/products/checkpoint/cloudguard-iaas-firewall-tp-payg-m)
-- Для сервера управления Check Point CloudGuard IaaS - Security Management необходимо приобрести отдельную лицензию либо использовать свою on-prem инсталляцию сервера управления
+Для использования в продуктивной среде необходимо приобрести лицензии на решение Check Point CloudGuard IaaS. Если используется своя on-prem инсталляция сервера управления Check Point, то развертывать ВМ сервера управления в облаке не требуется.
 
 
 ### Группы безопасности
@@ -614,7 +612,7 @@ Destination NAT трансляции направляют запросы пол�
 - Настройте Access Control политики и NAT в Check Point NGFW для вашей инсталляции.
 - Настройте правила в группах безопасности в сегментах, необходимые для работы развернутых приложений.
 - Не назначайте публичные IP адреса на ВМ в сегментах, где используются таблицы маршрутизации через Check Point NGFW. Исключением является mgmt сегмент управления, где в таблицах маршрутизации не используется default route `0.0.0.0/0`. 
-- Выберите подходящую лицензию и образ для Check Point CloudGuard IaaS (смотрите раздел [Next-Generation Firewall](#next-generation-firewall)).
+- Для использования в продуктивной среде необходимо приобрести лицензии на решение Check Point CloudGuard IaaS
 
 
 ## Как удалить созданные ресурсы
